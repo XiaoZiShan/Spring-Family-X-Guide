@@ -31,23 +31,23 @@ import org.springframework.lang.Nullable;
 import org.springframework.util.ReflectionUtils;
 
 /**
- * Default {@link BeanWrapper} implementation that should be sufficient
- * for all typical use cases. Caches introspection results for efficiency.
- *
- * <p>Note: Auto-registers default property editors from the
- * {@code org.springframework.beans.propertyeditors} package, which apply
- * in addition to the JDK's standard PropertyEditors. Applications can call
- * the {@link #registerCustomEditor(Class, java.beans.PropertyEditor)} method
- * to register an editor for a particular instance (i.e. they are not shared
- * across the application). See the base class
- * {@link PropertyEditorRegistrySupport} for details.
- *
- * <p><b>NOTE: As of Spring 2.5, this is - for almost all purposes - an
- * internal class.</b> It is just public in order to allow for access from
- * other framework packages. For standard application access purposes, use the
- * {@link PropertyAccessorFactory#forBeanPropertyAccess} factory method instead.
- *
- * @author Rod Johnson
+ *  * Default {@link BeanWrapper} implementation that should be sufficient
+ *  * for all typical use cases. Caches introspection results for efficiency.
+ *  *
+ *  * <p>Note: Auto-registers default property editors from the
+ *  * {@code org.springframework.beans.propertyeditors} package, which apply
+ *  * in addition to the JDK's standard PropertyEditors. Applications can call
+ *  * the {@link #registerCustomEditor(Class, java.beans.PropertyEditor)} method
+ *  * to register an editor for a particular instance (i.e. they are not shared
+ *  * across the application). See the base class
+ *  * {@link PropertyEditorRegistrySupport} for details.
+ *  *
+ *  * <p><b>NOTE: As of Spring 2.5, this is - for almost all purposes - an
+ *  * internal class.</b> It is just public in order to allow for access from
+ *  * other framework packages. For standard application access purposes, use the
+ *  * {@link PropertyAccessorFactory#forBeanPropertyAccess} factory method instead.
+ *  *
+ *  * @author Rod Johnson
  * @author Juergen Hoeller
  * @author Rob Harrop
  * @author Stephane Nicoll
