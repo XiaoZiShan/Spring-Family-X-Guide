@@ -1,15 +1,16 @@
-package org.springframework.context;
+package org.springframework.context.annotationX.circular;
 
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotationX.circular.autowired.Bean1AutowiredBean2Demo;
 import org.springframework.context.annotationX.circular.constructor.Bean1ConstructorBean2Demo;
+import org.springframework.core.log.LogFormatUtils;
 
-/**
- * Created by 刷题使我快乐,自律使我自由 !
- */
 public class AnnotationCircularDependencyTestX {
+	protected final Log logger = LogFactory.getLog(getClass());
 
 	@Test
 	public void diBeanByAutowired() throws Exception {
@@ -27,6 +28,16 @@ public class AnnotationCircularDependencyTestX {
 		context.refresh();
 		Bean1ConstructorBean2Demo bean1 = (Bean1ConstructorBean2Demo) context.getBean("bean1ConstructorBean2Demo");
 		bean1.hello();
+	}
+
+
+	@Test
+	public  void logLogFormatUtilsTest(){
+		LogFormatUtils.formatValue("hello Spring日志缩减方法", true);
+
+		LogFormatUtils.traceDebug(logger,traceOn ->{
+			return "hello 函数式编程";
+		});
 	}
 
 }

@@ -1,6 +1,7 @@
 package org.springframework.context.annotationX.circular.constructor;
 
 
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 /**
@@ -8,9 +9,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class Bean2ConstructorBean1Demo {
-
 	private Bean1ConstructorBean2Demo bean1;
-
 	public Bean2ConstructorBean1Demo(Bean1ConstructorBean2Demo bean1DependBean2Demo1) {
 		bean1 = bean1DependBean2Demo1;
 	}

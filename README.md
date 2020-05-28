@@ -1,5 +1,21 @@
 # SpringFamily-SourceCodeStudy
-Spring 系列源码解读, 
+#### 学前须知
+
++ 本项目适合有一年以上 Spring 使用经验的小伙伴 或 多年主流语言开发经验的朋友.
++ 本项目基于 Spring-5.16 并在此基础上进行二次开发. 
++ 环境配置参考 -> [IntelliJ IDEA 导入 Spring 源码教程](http://www.glorze.com/1617.html)
+
+#### PR 规范
+
+1. 禁止修改源码,  可在Spring 允许的情况下做扩展.
+2. 允许对 Spring源码进行精简注释.
+3. 扩展的代码或测试用例只能存放在要在 test 目录.
+4.  test 目录下的如果超过一个类则请 新建 package 并以X 结尾.如果只有一个类 则类名用 X 结尾.
+5. PR前建议  先 [Issue](https://github.com/XiaoZiShan/springFamily-SourceCodeStudy/issues/new) 再 PR. 
+
+#### 里程碑记录 
 
 + 2019.8.11 Push SpringBoot-Starter-WebSocket Demo
 ![Alt text](https://github.com/1821309590/SpringFamily-SourceCodeStudy/blob/master/SpringBoot-Starter-WebSocket%402.16/Demo-README.png)
+
++ 2020.5.28 Push Base on Spring-5.16 add My new Test Case and SourceCode Annotation
