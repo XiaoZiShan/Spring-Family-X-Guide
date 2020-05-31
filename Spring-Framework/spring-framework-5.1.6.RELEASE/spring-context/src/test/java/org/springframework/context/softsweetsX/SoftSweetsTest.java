@@ -24,4 +24,12 @@ public class SoftSweetsTest {
 		System.out.println("\n新鲜出炉的X软糖 ~~~ \n 生产线名称: " + bean.getProductionLineName() + "\n 生产日期: " + bean.getDateManufacture());
 	}
 
+	@Test
+	public void A_ProductLine_X(){
+		// 推荐容器初始化方式
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SoftSweetsConfig.class);
+		SoftSweetsBean bean = (SoftSweetsBean) context.getBean("softSweetsBean");
+		System.out.println("\n新鲜出炉的A软糖 ~~~ \n 生产线名称: " + bean.getProductionLineName() + "\n 生产日期: " + bean.getDateManufacture());
+	}
+
 }

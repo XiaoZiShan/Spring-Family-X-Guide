@@ -135,7 +135,7 @@ public abstract class AbstractRefreshableApplicationContext extends AbstractAppl
 			// 对 IOC 容器进行定制化, 如设置启动参数, 开启注解的自动装配等
 			customizeBeanFactory(beanFactory);
 			// 调用载入 Bean 定义的方法, 这里又使用了一个委派模式
-			// 在当前类中只定义了抽象的 loadBeanDefinitions
+			// <加载/> 在当前类中只定义了抽象的 loadBeanDefinitions
 			loadBeanDefinitions(beanFactory);
 			synchronized (this.beanFactoryMonitor) {
 				this.beanFactory = beanFactory;

@@ -528,7 +528,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 				// 4. 为容器的某些子类指定的特殊的 Post 事件处理器
 				postProcessBeanFactory(beanFactory);
 
-				// 5. 调用所有注册的 BeanFactoryPostProcessor 的 Bean
+				// A 生产线 <加载/> 5. 调用所有注册的 BeanFactoryPostProcessor 的 Bean
 				invokeBeanFactoryPostProcessors(beanFactory);
 
 				// 6. 为 BeanFactory 注册 Post 事件处理器

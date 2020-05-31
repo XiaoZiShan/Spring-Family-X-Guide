@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Bean2AutowiredBean1Demo {
 
-    @Autowired
+   @Autowired
    private Bean1AutowiredBean2Demo bean1;
 
     public void hello(){
