@@ -11,7 +11,7 @@
 2. 允许对 Spring源码进行精简注释.
 3. 扩展的代码或测试用例只能存放在要在 test 目录.
 4.  test 目录下的如果超过一个类则请 新建 package 并以X 结尾.如果只有一个类 则类名用 X 结尾.
-5. PR前建议  先 [Issue](https://github.com/XiaoZiShan/springFamily-SourceCodeStudy/issues/new) 再 PR. 
+5. PR前建议  请先 [Issue](https://github.com/XiaoZiShan/springFamily-SourceCodeStudy/issues/new) 再 PR. 
 
 #### 里程碑记录 
 
