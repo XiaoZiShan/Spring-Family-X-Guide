@@ -9,9 +9,10 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class Bean1ConstructorBean2Demo {
+
 	private Bean2ConstructorBean1Demo bean2;
-	// success @Lazy
-	public Bean1ConstructorBean2Demo(Bean2ConstructorBean1Demo bean2DependBean1Demo) {
+
+	public Bean1ConstructorBean2Demo( Bean2ConstructorBean1Demo bean2DependBean1Demo) {
 		this.bean2 = bean2DependBean1Demo;
 	}
 

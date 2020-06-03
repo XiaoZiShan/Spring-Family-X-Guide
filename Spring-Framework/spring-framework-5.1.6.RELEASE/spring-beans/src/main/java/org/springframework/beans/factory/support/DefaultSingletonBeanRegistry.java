@@ -16,6 +16,7 @@
 
 package org.springframework.beans.factory.support;
 
+import java.time.Instant;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -174,9 +175,12 @@ public class DefaultSingletonBeanRegistry extends SimpleAliasRegistry implements
 	 */
 	@Nullable
 	protected Object getSingleton(String beanName, boolean allowEarlyReference) {
+		// 从单例池 (一级缓存) 中直接拿 Bean
 		Object singletonObject = this.singletonObjects.get(beanName);
+		// 一级缓存中没有 该Bean, 并且当前 BeanName 在正在创建的 Set 集合中
 		if (singletonObject == null && isSingletonCurrentlyInCreation(beanName)) {
 			synchronized (this.singletonObjects) {
+				// 从三级缓存拿 Bean, 原因: 第一次其实是拿不到的, 因为现在只有 二级缓存中 存了一个 工厂对象, 所以成立向三级缓存添加
 				singletonObject = this.earlySingletonObjects.get(beanName);
 				if (singletonObject == null && allowEarlyReference) {
 					ObjectFactory<?> singletonFactory = this.singletonFactories.get(beanName);
@@ -336,6 +340,7 @@ public class DefaultSingletonBeanRegistry extends SimpleAliasRegistry implements
 	 * @see #isSingletonCurrentlyInCreation
 	 */
 	protected void beforeSingletonCreation(String beanName) {
+		// 当前 Bean 不存在可排除的 inCreationCheckExclusions && 当前 Bean 之前已存在于 singletonsCurrentlyInCreation 中
 		if (!this.inCreationCheckExclusions.contains(beanName) && !this.singletonsCurrentlyInCreation.add(beanName)) {
 			throw new BeanCurrentlyInCreationException(beanName);
 		}

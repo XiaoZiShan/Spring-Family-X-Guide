@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotationX.circular.autowired.Bean1AutowiredBean2Demo;
 import org.springframework.context.annotationX.circular.constructor.Bean1ConstructorBean2Demo;
+import org.springframework.context.annotationX.circular.constructor.Bean2ConstructorBean1Demo;
 import org.springframework.core.log.LogFormatUtils;
 
 public class AnnotationCircularDependencyTestX {
@@ -28,6 +29,8 @@ public class AnnotationCircularDependencyTestX {
 		context.refresh();
 		Bean1ConstructorBean2Demo bean1 = (Bean1ConstructorBean2Demo) context.getBean("bean1ConstructorBean2Demo");
 		bean1.hello();
+		Bean2ConstructorBean1Demo bean2 = (Bean2ConstructorBean1Demo) context.getBean("bean2ConstructorBean1Demo");
+		bean2.hellox();
 	}
 
 
