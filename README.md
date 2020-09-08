@@ -22,5 +22,5 @@
 
 + 2020.9.4 Push SpringCloud-starter-alibaba-nacos-Discovery - [Provider and Consumer Demo](https://github.com/XiaoZiShan/SpringFamily-SourceCodeStudy)
 
-![Alt text](https://github.com/XiaoZiShan/SpringFamily-SourceCodeStudy/tree/master/Spring-Cloud/Alibaba/Nacos/nacos-demo/Nacos-Config.png?raw=true)
+![Alt text](https://github.com/XiaoZiShan/SpringFamily-SourceCodeStudy/blob/master/Spring-Cloud/Alibaba/Nacos/nacos-demo/Nacos-Discovery.png?raw=true)
 
