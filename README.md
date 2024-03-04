@@ -2,7 +2,7 @@
 #### *Warning*
 
 + 本项目适合有一年以上 Spring 使用经验的小伙伴 或 多年主流语言开发经验的朋友.
-+ 本项目基于 Spring-5.16 并在此基础上进行二次开发. 
++ 本项目基于 Spring-5.16 并在此基础上进行二次定制开发学习. 
 + 环境配置参考 -> [IntelliJ IDEA 导入 Spring 源码教程](http://www.glorze.com/1617.html)
 
 #### Pull request standard
@@ -11,7 +11,7 @@
 2. 允许对 Spring源码进行精简注释.
 3. 扩展的代码或测试用例只能存放在要在 test 目录.
 4.  test 目录下的如果超过一个类则请 新建 package 并以X 结尾.如果只有一个类 则类名用 X 结尾.
-5. PR前建议  请先 [Issue](https://github.com/XiaoZiShan/springFamily-SourceCodeStudy/issues/new) 再 PR. 
+5. PR前建议  请先 [Issue](https://github.com/XiaoZiShan/Spring-Family-X-Guide/issues/new) 再 PR. 
 
 #### Changes logs 
 
